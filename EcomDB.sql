@@ -99,18 +99,3 @@ CREATE TABLE Reviews (
     FOREIGN KEY (product_id) REFERENCES Products(product_id),
     FOREIGN KEY (user_id) REFERENCES User(user_id)
 );
-INSERT INTO Categories (category_id, name,description ,parent_category_id) VALUES
-(1, 'Electronics',"devices", NULL),
-(2, 'Mobile Phones',"smart", 1),
-(3, 'Laptops', "pcs",1),
-(4, 'Cameras',"photo", 1),
-(5, 'Smartphones', "smart devices",2),
-(6, 'Feature Phones', "devices",2),
-(7, 'clothes',"clothes", NULL),
-(8, 'pants',"smart", 7),
-(9, 't shrits', "shirts",7),
-(10, 'shirts',"shirts for women", 7),
-(11, 'cargo', "for tarning",8),
-(12, 'cotton shrits', "cotton for tranning",10);
-
-select * from Categories  where parent_category_id=7
