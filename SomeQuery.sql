@@ -34,8 +34,13 @@ on s.order_id=o.order_id
 join User as u
 on u.user_id=o.user_id
 group by full_name
-order by max_shipping desc
+order by max_shipping desc;
 
-
-
+select sum(oi.price_at_purchase) as price_at_purchase ,u.first_name from Order_Items as oi
+join Orders as o on
+o.order_id=oi.order_id
+join User as u on
+u.user_id=o.user_id
+where u.first_name="maged"
+group by u.first_name;
 
